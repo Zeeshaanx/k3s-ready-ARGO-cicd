@@ -17,7 +17,7 @@ spec:
       - name: ecr-secret
       containers:
       - name: risk-eval
-        image: 825765396079.dkr.ecr.us-east-1.amazonaws.com/risk-eval:latest
+        image: 825765396079.dkr.ecr.us-east-1.amazonaws.com/risk-eval:9456fa6c88d1bfd457d7a2a445ca23ae91af0ed7
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
