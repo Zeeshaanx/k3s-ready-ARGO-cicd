@@ -17,7 +17,7 @@ spec:
       - name: ecr-secret
       containers:
       - name: garak
-        image: 825765396079.dkr.ecr.us-east-1.amazonaws.com/garak:latest
+        image: 825765396079.dkr.ecr.us-east-1.amazonaws.com/garak:77e9358dbd14854595ac48dc290c80b59adfb9a5
         imagePullPolicy: Always
         ports:
         - containerPort: 80
