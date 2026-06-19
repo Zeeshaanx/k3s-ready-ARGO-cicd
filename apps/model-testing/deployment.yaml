@@ -17,7 +17,7 @@ spec:
       - name: ecr-secret
       containers:
       - name: model-testing
-        image: 825765396079.dkr.ecr.us-east-1.amazonaws.com/model-testing:latest
+        image: 825765396079.dkr.ecr.us-east-1.amazonaws.com/model-testing:852abd4f17b938fa6b176efa2e2f182b7d5fbf02
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
