@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: model-testing
+  namespace: services
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: model-testing
+  template:
+    metadata:
+      labels:
+        app: model-testing
+    spec:
+      imagePullSecrets:
+      - name: ecr-secret
+      containers:
+      - name: model-testing
+        image: 825765396079.dkr.ecr.us-east-1.amazonaws.com/model-testing:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: model-testing-service
+  namespace: services
+spec:
+  selector:
+    app: model-testing
+  ports:
+  - port: 80
+    targetPort: 8000
