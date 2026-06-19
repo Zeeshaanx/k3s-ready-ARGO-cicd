@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: aisec-digital-risk
-        image: 825765396079.dkr.ecr.us-east-1.amazonaws.com/aisec-digital-risk:latest
+        image: 825765396079.dkr.ecr.us-east-1.amazonaws.com/aisec-digital-risk:dc3e6aef573c4890cc4799aa429c92892fc78630
         imagePullPolicy: Always
         ports:
         - containerPort: 80
