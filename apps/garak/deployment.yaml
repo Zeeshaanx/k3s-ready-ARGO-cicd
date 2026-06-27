@@ -13,6 +13,8 @@ spec:
       labels:
         app: garak
     spec:
+      nodeSelector:
+        workload: gpu
       imagePullSecrets:
       - name: ecr-secret
       containers:
